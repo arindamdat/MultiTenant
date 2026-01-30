@@ -1,6 +1,6 @@
-@MultiTenant_HostAddress = http://localhost:5045
+@MultiTenant_HostAddress = http://localhost:8086
 
-GET {{MultiTenant_HostAddress}}/weatherforecast/
+GET {{MultiTenant_HostAddress}}/persons/
 Accept: application/json
 
 ###
