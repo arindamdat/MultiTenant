@@ -1,0 +1,30 @@
+version: '3.8'
+services:
+  multitenant-app:
+    image: multitenant-app:latest
+    build:
+      context: ./MultiTenant
+      dockerfile: Dockerfile
+      args:
+        BUILD_CONFIGURATION: Debug
+    ports:
+      - "8086:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+    depends_on:
+      - sqlserver
+
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=Your_password123
+      - MSSQL_PID=Express
+    ports:
+      - "2433:1433"
+    volumes:
+      - sqlserverdata:/var/opt/mssql
+
+volumes:
+  sqlserverdata:

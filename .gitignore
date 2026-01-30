@@ -1,0 +1,44 @@
+# .NET & Visual Studio
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+.vs/
+
+# Docker
+**/Dockerfile.*.deps.json
+**/Dockerfile.*.runtime.json
+**/docker-compose.*.yml
+**/docker-compose.*.override.yml
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Secrets
+secrets.json
+*.pfx
+*.key
+*.snk
+
+# Others
+.env
+.idea/
+*.swp
+*.bak
+*.tmp
+
+# Rider
+.idea/
+*.sln.iml
+
+# Test results
+TestResults/
+
+# NCrunch
+.ncrunch*
