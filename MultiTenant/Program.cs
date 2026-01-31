@@ -82,7 +82,7 @@ internal class Program
         app.MapControllers();
         app.MapGet("/ping", () => "pong");
 
-        //await TenantMigrationAndSeed.MigrateAndSeedAsync(tenantConfigPath);
+        await TenantMigrationAndSeed.MigrateAndSeedAsync(tenantConfigPath);
 
         app.Run();
     }

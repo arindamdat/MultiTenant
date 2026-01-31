@@ -1,5 +1,5 @@
 @MultiTenant_HostAddress = http://localhost:8086
-@Tenant_Id = tenant-2
+@Tenant_Id = tenant-1
 GET {{MultiTenant_HostAddress}}/persons/
 Accept: application/json
 X-Tenant-Id: {{Tenant_Id}}
