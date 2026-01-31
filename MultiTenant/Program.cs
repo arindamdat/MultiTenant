@@ -23,6 +23,7 @@ internal class Program
             .ReadFrom.Services(services)
             .WriteTo.Console());
 
+        
         builder.Services.AddControllers().AddControllersAsServices();
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
@@ -58,6 +59,10 @@ internal class Program
                         optionsBuilder.UseSqlServer(tenant.ConnectionString);
                         return new PersonDbContext(optionsBuilder.Options);
                     }).InstancePerLifetimeScope();
+
+                    cb.RegisterType<MyRandomService>()
+                      .As<IMyRandomService>()
+                      .SingleInstance();
                 });
             }
             return _mtc!;
