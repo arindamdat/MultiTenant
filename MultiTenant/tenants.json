@@ -3,11 +3,13 @@
     {
       "Id": "tenant-1",
       "Name": "Tenant 1",
+      "ShortName": "tenant1",
       "ConnectionString": "Server=sqlserver,1433;Database=tenant-1;User=sa;Password=Your_password123;TrustServerCertificate=True;"
     },
     {
       "Id": "tenant-2",
       "Name": "Tenant 2",
+      "ShortName": "tenant2",
       "ConnectionString": "Server=sqlserver,1433;Database=tenant-2;User=sa;Password=Your_password123;TrustServerCertificate=True;"
     }
   ]

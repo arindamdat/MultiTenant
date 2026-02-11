@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -5,6 +6,7 @@ namespace MultiTenant.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    [Authorize]
     public class PersonsController : ControllerBase
     {
         private readonly PersonDbContext _dbContext;
